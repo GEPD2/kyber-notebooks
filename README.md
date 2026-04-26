@@ -48,7 +48,3 @@ The pedagogical parameters are chosen so that every intermediate value fits on a
 kyber-platform with Interactive web platform with six difficulty levels, from modular arithmetic to raw C KEM implementation
 KYber_LWE C implementation from scratch: Keccak, SHAKE, NTT, full ML-KEM for all three security levels
 FIPS 203 Official NIST standard
-
-
-License
-MIT
