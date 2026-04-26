@@ -1,12 +1,12 @@
-CRYSTALS-Kyber Mathematical Walkthrough Notebooks
-Post-Quantum Key Encapsulation Mechanism | ML-KEM / FIPS 203
-Step-by-step Jupyter notebooks for learning the complete mathematics of
-CRYSTALS-Kyber (ML-KEM, FIPS 203) using small pedagogical parameters
-(q=17, n=8, k=2) where every arithmetic operation can be verified by hand.
+**CRYSTALS-Kyber Mathematical Walkthrough Notebooks**
+## Post-Quantum Key Encapsulation Mechanism | ML-KEM / FIPS 203
+Step by step Jupyter notebooks for learning the complete mathematics of
+**CRYSTALS-Kyber (ML-KEM, FIPS 203) using small pedagogical parameters
+(q=17, n=8, k=2) where every arithmetic operation can be verified by hand.**
 These notebooks accompany the paper:
 
-A Case Study on CRYSTALS-Kyber: Bridging Theory and Practice in Post-Quantum Key Encapsulation Pedagogy
-Georgios Efthymiou Ionian University, 2026
+**A Case Study on CRYSTALS-Kyber: Bridging Theory and Practice in Post-Quantum Key Encapsulation Pedagogy
+Georgios Efthymiou Ionian University, 2026**
 
 What's Inside
 The notebooks walk through eight modules in order:
@@ -30,18 +30,20 @@ Module 8: Full System Test
 The complete KeyGen → Encapsulate → Decapsulate pipeline assembled in a single cell, with verification that the recovered message matches the original.
 
 Quickstart
+```bash
 bashgit clone https://github.com/GEPD2/kyber-notebooks.git
 cd kyber-notebooks
 pip install numpy sympy jupyter
 jupyter notebook
+```
 Open kyber_student.ipynb to work through the exercises, or kyber_solution.ipynb to see the complete solutions.
 No external cryptography libraries required. Everything is implemented from scratch using only NumPy and SymPy.
 
-Parameters
+## Parameters
 ParameterPedagogicalFIPS 203 (ML-KEM-768)q (modulus)173329n (degree)8256k (rank)23η (noise)22VerificationBy handComputational
 The pedagogical parameters are chosen so that every intermediate value fits on a single line and can be checked with a calculator. The algorithms are structurally identical to FIPS 203 production parameters.
 
-Related
+## Related
 
 kyber-platform with Interactive web platform with six difficulty levels, from modular arithmetic to raw C KEM implementation
 KYber_LWE C implementation from scratch: Keccak, SHAKE, NTT, full ML-KEM for all three security levels
