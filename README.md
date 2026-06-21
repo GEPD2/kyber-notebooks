@@ -74,9 +74,9 @@ identical to the FIPS 203 production parameters; only the magnitudes differ.
 
 ## Related
 
-- **[kyber-platform](https://github.com/GEPD2/kyber-platform)** — interactive web
+- **[kyber-platform](https://github.com/GEPD2/kyber-platform)**: interactive web
   platform with six difficulty levels, from modular arithmetic to a raw C KEM
   implementation.
-- **[KYber_LWE](https://github.com/GEPD2/KYber_LWE)** — C implementation from
+- **[KYber_LWE](https://github.com/GEPD2/KYber_LWE)**: C implementation from
   scratch: Keccak, SHAKE, the NTT, and the full ML-KEM for all three security levels.
-- **[FIPS 203](https://doi.org/10.6028/NIST.FIPS.203)** — the official NIST standard.
+- **[FIPS 203](https://doi.org/10.6028/NIST.FIPS.203)**: the official NIST standard.
