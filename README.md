@@ -8,36 +8,36 @@ Step-by-step Jupyter notebooks for learning the complete mathematics of
 These notebooks accompany the paper:
 
 > **A Case Study on CRYSTALS-Kyber: Bridging Theory and Practice in Post-Quantum
-> Key Encapsulation Pedagogy** — Georgios Efthymiou, Ionian University, 2026.
+> Key Encapsulation Pedagogy** by Georgios Efthymiou, Ionian University, 2026.
 
 ## What's Inside
 
 The notebooks walk through nine modules (0–8) in order:
 
-- **Module 0 — Global Setup.** Sets the pedagogical parameters (`Q=17, N=8, K=2, ETA=2`)
+- **Module 0: Global Setup.** Sets the pedagogical parameters (`Q=17, N=8, K=2, ETA=2`)
   and the precomputed reference values. Run this cell first, since every other cell
   depends on these shared constants.
-- **Module 1 — Mathematical Foundations.** The ring `R_q = Z₁₇[X] / (X⁸ + 1)`,
+- **Module 1: Mathematical Foundations.** The ring `R_q = Z₁₇[X] / (X⁸ + 1)`,
   polynomial addition and multiplication mod q, and the primitive roots of unity
   that power the NTT.
-- **Module 2 — CBD Sampling.** Why Kyber needs small coefficients, and how the
+- **Module 2: CBD Sampling.** Why Kyber needs small coefficients, and how the
   Centered Binomial Distribution turns random bits (the PRF output — `SHAKE-256`
   in FIPS 203) into the secret vector s and the error vector e.
-- **Module 3 — Forward NTT (Cooley–Tukey).** Why naive polynomial multiplication
+- **Module 3: Forward NTT (Cooley–Tukey).** Why naive polynomial multiplication
   is O(n²) and how the Number Theoretic Transform reduces it to O(n log n), with
   the full butterfly trace and intermediate values at every step.
-- **Module 4 — Inverse NTT.** The same butterfly structure run in reverse, with the
+- **Module 4: Inverse NTT.** The same butterfly structure run in reverse, with the
   inverse twiddle factors and the final `n⁻¹ mod q` scaling step.
-- **Module 5 — Public Key: t̂ = Â·ŝ + ê.** Why all computation stays in the NTT
+- **Module 5: Public Key: t̂ = Â·ŝ + ê.** Why all computation stays in the NTT
   domain, how the public matrix Â is derived deterministically from a public seed ρ
   (expanded with `SHAKE-128`, the XOF, in FIPS 203), and why knowing (Â, t̂) does
   not reveal s.
-- **Module 6 — Encapsulation.** How the sender uses the public key to encode a
+- **Module 6: Encapsulation.** How the sender uses the public key to encode a
   message bit with the `⌊q/2⌋` scaling trick, producing the ciphertext (u, v).
-- **Module 7 — Decapsulation.** How the receiver uses the secret key to recover the
+- **Module 7: Decapsulation.** How the receiver uses the secret key to recover the
   message, and why the noise bound `‖e‖∞ ≪ q/4` is the condition that guarantees
   correct decryption.
-- **Module 8 — Full System Test.** The complete KeyGen → Encapsulate → Decapsulate
+- **Module 8: Full System Test.** The complete KeyGen → Encapsulate → Decapsulate
   pipeline assembled in a single cell, verifying that the recovered message matches
   the original.
 
